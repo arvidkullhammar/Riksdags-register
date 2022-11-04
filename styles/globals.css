@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: rgb(185,218,255);
+    background: linear-gradient(207deg, rgba(185,218,255,0.38426708574054624) 0%, rgba(244,244,244,0.33104579722514005) 70%); 
 }
 
 a {

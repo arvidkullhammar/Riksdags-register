@@ -1,8 +1,14 @@
 .container {
     display: flex;
-    width: 20vw;
+    width: 25vw;
     margin: 0 auto;
     justify-content: space-around;
-    height: 200px;
+    height: 100px;
     align-items: center;
+    z-index: 10;
 }
+
+.maincontainer {
+background-color: #f3f3f3;
+border-bottom: 1px solid rgb(161, 161, 161);
+} 

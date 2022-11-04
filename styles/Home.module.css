@@ -6,8 +6,7 @@ display: flex;
 }
 
 .maincontainer {
-  width: 80vw;
-  margin: 0 auto;
+  width: 100vw;
 }
 .searchbar {
   height: 10vh;
@@ -18,14 +17,26 @@ display: flex;
   margin: 0 auto;
 }
 
+.header {
+  position: fixed;
+z-index: 1100;
+top: 0px;
+left: auto;
+right: 0px;
+width: 100vw;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
   justify-content:center;
   column-gap: 10px;
   align-items: center;
-  margin-bottom: 100px;
   row-gap: 10px;
+padding-top: 200px;
+padding-bottom: 200px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 
@@ -105,7 +116,7 @@ display: flex;
   max-width: 800px;
 }
 
-.card {
+/* .card {
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -116,14 +127,8 @@ display: flex;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
   min-width: 160px;
-}
+} */
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
 
 .card h2 {
   margin: 0 0 1rem 0;
@@ -158,5 +163,21 @@ display: flex;
   }
   .logo img {
     filter: invert(1);
+  }
+}
+
+.card {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  background: #333;
+  padding: 30px;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

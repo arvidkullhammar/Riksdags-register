@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 const axios = require("axios");
 import { useEffect, useState } from "react";
 import Membercard from "../Components/Membercard/Membercard";
+import Headercomponent from "../Components/Header/Headercomponent";
 
 export default function Home() {
   const [list, setList] = useState([] as any[]);
@@ -49,45 +50,25 @@ export default function Home() {
 
   return (
     <div className={styles.maincontainer}>
-      <div className={styles.searchbar}>
-        <div>
-          Ålder:
-          <select
-            defaultValue={"DEFAULT"}
-            onChange={(e) => sortAge(e.target.value)}
-          >
-            <option value="DEFAULT" disabled>
-              None
-            </option>
-            <option value="ascending">Ascending</option>
-            <option value="descending">Descending</option>
-          </select>
-        </div>
-        <div>
-          Parti:
-          <select
-            defaultValue={"DEFAULT"}
-            onChange={(e) => sortParty(e.target.value)}
-          >
-            <option value="DEFAULT" disabled>
-              None
-            </option>
-            <option value="C">Centerpartiet</option>
-            <option value="L">Liberalerna</option>
-            <option value="MP">Miljöpartiet</option>
-            <option value="M">Moderaterna</option>
-            <option value="S">Socialdemokraterna</option>
-            <option value="SD">Sverigedemokraterna</option>
-            <option value="KD">Kristdemokraterna</option>
-            <option value="V">Vänsterpartiet</option>
-          </select>
-        </div>
+      <div className={styles.header}>
+        <Headercomponent
+          age={age}
+          party={party}
+          ageCallback={sortAge}
+          partyCallback={sortParty}
+        />
       </div>
 
       {getSortedList() ? (
         <div className={styles.container}>
           {getSortedList().map((member: any, i: any) => {
-            return <Membercard key={member.sourceid} data={member} />;
+            return (
+              <Membercard
+                className={styles.card}
+                key={member.sourceid}
+                data={member}
+              />
+            );
           })}
         </div>
       ) : (

@@ -1,18 +1,18 @@
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    background-color: #1e293bc2;
+    background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
     height: 150px;
     width: 300px;
     padding: 15px;
-
     display: flex;
     position: relative;
     border-radius: 10px;
     min-width: 160px;
     color: white;
     font-size: 14px;
+    animation: rollout 1.4s;
   }
 
   .textfield {
@@ -37,7 +37,9 @@
   
   /* On mouse-over, add a deeper shadow */
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0px 0px 0 rgba(79, 229, 255, 0.9);
+    transform: scale(1.05);
+    z-index: 10;
   }
   
   /* Add some padding inside the card container */
@@ -50,3 +52,13 @@
   .nomargin {
     margin: 0;
   }
+
+
+  @keyframes rollout {
+    0% { transform: translateY(-100px);
+      opacity: 0%; }
+    100% { transform: none;
+      ;
+      opacity: 100%; }
+  }
+  

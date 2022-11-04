@@ -31,7 +31,7 @@ export default function Membercard(props: any) {
           <Select
             labelId="age-label"
             id="age-select"
-            value={age}
+            value={age || ""}
             label="age"
             onChange={(e) => ageChange(e?.target.value)}
           >
@@ -50,7 +50,7 @@ export default function Membercard(props: any) {
           <Select
             labelId="party-label"
             id="party-select"
-            value={party}
+            value={party || ""}
             label="party"
             onChange={(e) => partyChange(e?.target.value)}
           >

@@ -38,8 +38,8 @@ export default function Membercard(props: any) {
             <MenuItem value="DEFAULT" disabled>
               None
             </MenuItem>
-            <MenuItem value="ascending">Ascending</MenuItem>
-            <MenuItem value="descending">Descending</MenuItem>
+            <MenuItem value="ascending">Stigande</MenuItem>
+            <MenuItem value="descending">Fallande</MenuItem>
           </Select>
         </FormControl>
         <FormControl

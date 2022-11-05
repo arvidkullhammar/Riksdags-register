@@ -9,6 +9,7 @@ export default function Membercard(props: any) {
     fodd_ar: born,
     valkrets: area,
     parti: party,
+    sourceid,
   } = props.data;
 
   const getLogo = (partyName: string): string => {
@@ -16,7 +17,7 @@ export default function Membercard(props: any) {
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-key={sourceid}>
       <img src={memberImg} />
       <div className={styles.container}>
         <span className={styles.logodiv}>

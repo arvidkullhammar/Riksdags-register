@@ -15,7 +15,7 @@ export default function Home() {
         `https://data.riksdagen.se/personlista/?parti=${party}&utformat=json`
       )
       .then((res: any) => res.data.personlista.person)
-      .then((res: any) => (age ? sortFunction(res, age) : res))
+      // .then((res: any) => (age ? sortFunction(res, age) : res))
       .then((res: any) => setList(res));
   };
 
